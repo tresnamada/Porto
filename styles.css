@@ -1,0 +1,393 @@
+/* Responsive Navbar */
+.navbar {
+  padding: 1rem;
+  background-color: #333;
+  /* Warna latar belakang navbar */
+  color: #fff;
+  /* Warna teks navbar */
+  padding: 1rem 0;
+  /* Padding di atas dan bawah navbar */
+  position: sticky;
+  /* Posisi navbar tetap di atas saat scroll */
+  top: 0;
+  /* Tempatkan di bagian atas halaman */
+  z-index: 1000;
+  /* Menjaga navbar di atas konten lainnya */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  /* Tambah bayangan */
+}
+
+
+
+
+.navbar .container {
+  display: flex;
+  /* Gunakan flexbox untuk mengatur elemen */
+  justify-content: space-between;
+  /* Jarak antara logo dan menu */
+  align-items: center;
+  /* Posisi elemen di tengah secara vertikal */
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin-left: 1.5rem;
+}
+
+.navbar ul li a {
+  font-size: 1rem;
+  color: #fff;
+  /* Warna teks link */
+  text-decoration: none;
+  /* Hilangkan garis bawah link */
+  font-size: 1rem;
+  /* Ukuran teks link */
+  font-weight: 500;
+  /* Ketebalan font */
+  padding: 0.5rem 1rem;
+  /* Padding di sekitar teks link */
+  transition: background 0.3s ease, color 0.3s ease;
+  /* Animasi pada hover */
+  border-radius: 5px;
+  /* Membuat sudut melengkung */
+}
+
+
+
+.navbar ul li a:hover {
+  background-color: #007bff;
+  /* Warna latar belakang saat hover */
+  color: #fff;
+  /* Warna teks saat hover */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  /* Tambahkan efek bayangan */
+}
+
+.navbar ul li a.active {
+  background-color: #555;
+  /* Warna latar belakang untuk link aktif */
+  color: #fff;
+  /* Warna teks untuk link aktif */
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+section {
+  margin-bottom: 4rem;
+  /* Tambahkan margin-bottom untuk setiap section */
+}
+
+
+
+/* Hero Section Styles */
+.hero {
+  height: 100vh;
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+/* About Section */
+.about {
+  padding: 2rem 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Skills Section */
+.skills {
+  padding: 2rem 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.projects .container p {
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.skill-item {
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem;
+  margin: 0.5rem;
+  flex: 1 0 21%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Projects Section */
+.projects {
+  padding: 2rem 0;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 2rem 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
+/* Style untuk foto profil bundar dengan ukuran responsif */
+.profile-photo {
+  width: 500px;
+  /* Ukuran gambar default (desktop) */
+  height: 500px;
+  /* Tinggi gambar sesuai lebar agar bundar */
+  border-radius: 50%;
+  /* Membuat gambar bundar */
+  object-fit: cover;
+  /* Agar gambar tetap proporsional */
+  margin-bottom: 1.5rem;
+  /* Jarak bawah gambar */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive untuk layar lebih kecil (tablet) */
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 180px;
+    /* Kurangi ukuran gambar di layar tablet */
+    height: 180px;
+  }
+}
+
+/* Responsive untuk layar smartphone */
+@media (max-width: 576px) {
+
+
+  .imgprojek {
+    width: 400px;
+    height: 200px;
+    /* Ukuran gambar lebih kecil untuk smartphone */
+
+  }
+
+  .imgprojek1 {
+
+    height: 400px;
+  }
+
+
+  @media (max-width: 768px) {
+    section {
+      margin-bottom: 3rem;
+      /* Kurangi margin-bottom pada layar tablet */
+    }
+  }
+
+  /* Media Queries untuk smartphone (576px ke bawah) */
+  @media (max-width: 576px) {
+    section {
+      margin-bottom: 2rem;
+      /* Kurangi margin-bottom lebih lanjut pada layar kecil */
+    }
+  }
+
+  /* Untuk layar ukuran tablet (768px ke bawah) */
+  @media (max-width: 768px) {
+    .navbar .container {
+      flex-direction: column;
+      /* Ubah layout navbar menjadi kolom */
+      align-items: flex-start;
+    }
+
+    .navbar ul {
+      flex-direction: column;
+      /* Ubah menu menjadi vertikal */
+      width: 100%;
+      /* Lebarkan menu hingga penuh */
+      display: none;
+      /* Default sembunyikan menu pada tablet dan hp */
+    }
+
+    .navbar ul li {
+      margin-left: 0;
+      /* Hilangkan margin kiri di menu */
+      margin-bottom: 1rem;
+      /* Jarak antar menu */
+    }
+
+    .navbar ul li a {
+      padding: 1rem;
+      /* Perbesar padding untuk kenyamanan klik */
+      width: 100%;
+      /* Full width untuk klik yang lebih mudah */
+      display: block;
+      text-align: left;
+      /* Sejajarkan teks ke kiri */
+    }
+
+    .navbar .toggle-menu {
+      display: block;
+      /* Tampilkan menu toggle di tablet dan hp */
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #fff;
+
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+    }
+
+    /* Hero section responsive */
+    .hero h2 {
+      font-size: 2rem;
+      /* Kurangi ukuran teks */
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      /* Kurangi ukuran subteks */
+    }
+  }
+
+  /* Untuk layar ukuran smartphone (576px ke bawah) */
+  @media (max-width: 576px) {
+
+
+    .navbar ul {
+      padding: 0;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 1.8rem;
+      /* Perkecil ukuran teks untuk layar kecil */
+    }
+
+    .hero p {
+      font-size: 1rem;
+      /* Sesuaikan subteks untuk layar kecil */
+    }
+
+    .skill-item {
+      flex: 1 0 48%;
+      /* Kurangi ukuran skill item untuk layar kecil */
+      margin-bottom: 1rem;
+    }
+
+    /* Responsif gambar profil */
+    .profile-photo {
+      width: 200px;
+      /* Perkecil ukuran gambar */
+      height: 150px;
+    }
+
+    .about p {
+      font-size: 0.9rem;
+      /* Kurangi ukuran font di bagian About */
+    }
+  }
+}
